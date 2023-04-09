@@ -1,38 +1,68 @@
-.App {
+.TrainBooking {
+  font-family: sans-serif;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.TrainBooking h1 {
+  margin: 0 0 1rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.error {
+  color: red;
+  margin-bottom: 1rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.coach {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.row {
+  display: flex;
+  margin: 0.5rem;
+}
+
+.seat {
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  width: 3rem;
+  height: 3rem;
+  margin: 0.25rem;
+  border-radius: 50%;
+  background-color: lightgray;
+  cursor: pointer;
+}
+
+.seat.available {
+  background-color: green;
+}
+
+.seat.selected {
+  background-color: blue;
+}
+
+.seat.booked {
+  background-color: red;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+}
+
+.controls button {
+  margin: 0 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  background-color: blue;
   color: white;
+  font-weight: bold;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.controls button:hover {
+  background-color: navy;
 }
